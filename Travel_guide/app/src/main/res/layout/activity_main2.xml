@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity"
+    >
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="center"
+        app:srcCompat="@drawable/back" />
+
+    <RelativeLayout
+        android:layout_width="354dp"
+        android:layout_height="396dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+
+        >
+
+        <Spinner
+            android:id="@+id/city"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:background="@drawable/spiner_shap"
+            android:dropDownWidth="wrap_content"
+
+            android:entries="@array/city_menu"
+            android:fadeScrollbars="false"
+            android:pointerIcon="hand"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/spiner_shap"
+            android:entries="@array/city_menu"
+            android:fadeScrollbars="false"
+            android:pointerIcon="hand"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/find"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="41dp"
+            android:background="@drawable/button_shap"
+
+            android:text="FIND OUT" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/layer2"
+        android:layout_width="527dp"
+        android:layout_height="900dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/layer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="144dp"
+        android:text="TERGO"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/clover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="-34dp"
+        android:src="@drawable/clover"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>

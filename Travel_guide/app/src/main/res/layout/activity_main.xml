@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/top"
+        />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="261dp"
+        android:layout_height="218dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/travel" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/logo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp">
+
+        <Button
+            android:id="@+id/angry_btn"
+
+            android:layout_width="223dp"
+            android:layout_height="45dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="107dp"
+            android:background="@drawable/button_shap"
+            android:text="Login"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+
+
+        <TextView
+            android:id="@+id/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="74dp"
+            android:text="Register Here."
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="false"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="80dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageButton
+
+        android:id="@+id/gifImageButton"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginBottom="111dp"
+        android:background="#ffffff"
+        android:scaleType="fitXY"
+        android:src="@drawable/loudingicon"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="335dp" />
+
+
+    <ImageView
+        android:id="@+id/layer2"
+        android:layout_width="527dp"
+        android:layout_height="900dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/layer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/morning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="555dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning"
+            android:textColor="@android:color/white"
+            android:textSize="30dp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="let's make a trip"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="45dp"
+        android:elevation="555dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TERGO"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="the way you travel"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="555dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/clover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="-34dp"
+            android:src="@drawable/clover"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
+</RelativeLayout>

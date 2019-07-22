@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TERGO</string>
+    <string-array name="city_menu">
+        <item>Egypt</item>
+        <item>Canda</item>
+        <item>England</item>
+        <item>Quter</item>
+        <item>France</item>
+    </string-array>
+</resources>
