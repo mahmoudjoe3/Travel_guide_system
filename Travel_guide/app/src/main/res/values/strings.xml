@@ -7,4 +7,19 @@
         <item>Quter</item>
         <item>France</item>
     </string-array>
+    <string-array name="cityop_menu">
+        <item>Main historical sites</item>
+        <item>Main points of interest</item>
+        <item>Famous recommended hotels</item>
+        <item>Main means of transportation</item>
+
+    </string-array>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_account">Account</string>
+    <string name="title_activity_favorite">favorite</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_account">account</string>
 </resources>

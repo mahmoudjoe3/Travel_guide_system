@@ -14,6 +14,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import pl.droidsonroids.gif.GifImageButton;
 
@@ -47,21 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         login.setOnClickListener(new View.OnClickListener() {
 
             @RequiresApi(api = Build.VERSION_CODES.M)
@@ -71,29 +58,35 @@ public class MainActivity extends AppCompatActivity {
 
 
                 //for delay
-                new Handler().postDelayed(new Runnable() {
+                new Handler().postDelayed(new Runnable()
+                {
                     @Override
-                    public void run() {
-                        layer.animate().translationY(0).setDuration(800).setStartDelay(600);
-                        findViewById(R.id.head).setVisibility(View.INVISIBLE);
+                    public void run()
+                    {
+                            layer.animate().translationY(0).setDuration(800).setStartDelay(600);
+                            findViewById(R.id.head).setVisibility(View.INVISIBLE);
 
-                        /////////////////////
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
+                            /////////////////////
+                            new Handler().postDelayed(new Runnable()
+                            {
+                                @Override
+                                public void run()
+                                {
 
-                                Intent show=new Intent(MainActivity.this,Main2Activity.class);
 
-                                startActivity(show);
-                                louding.setVisibility(View.INVISIBLE);
-                                layer.animate().translationY(-2000).setDuration(800).setStartDelay(600);
-                            }
-                        },3000);
-                        //////////////////////
+                                    Intent show = new Intent(MainActivity.this, Main2Activity.class);
+                                    startActivity(show);
+                                    louding.setVisibility(View.INVISIBLE);
+                                    layer.animate().translationY(-2000).setDuration(800).setStartDelay(600);
+                                }
+                            }, 2000);
+                            //////////////////////
+
 
                     }
-                },1000);
-            }
+
+                },1000);}
+
         });
     }
 }

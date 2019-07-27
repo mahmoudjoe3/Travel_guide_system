@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main3Activity"></activity>
+        <activity
+            android:name=".account"
+            android:label="@string/title_activity_account"></activity>
+        <activity
+            android:name=".favorite"
+            android:label="@string/title_activity_favorite" />
+        <activity
+            android:name=".Main"
+            android:label="@string/title_activity_main3" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
