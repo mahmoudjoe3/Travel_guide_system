@@ -44,10 +44,12 @@ public class Main2Activity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent show=new Intent(Main2Activity.this, Main.class);
+                        /*Intent show=new Intent(Main2Activity.this, Main.class);
                         show.putExtra("searchKey1",chosenCity);
                         show.putExtra("searchKey2",chosenType);
-                        startActivity(show);
+                        startActivity(show);*/
+                        Intent i=new Intent(Main2Activity.this,ListOne.class);
+                        startActivity(i);
                     }
                 },3000);
 

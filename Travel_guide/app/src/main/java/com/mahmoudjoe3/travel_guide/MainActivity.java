@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         layer=findViewById(R.id.layer2);
 
 
-        //findViewById(R.id.clover).animate().alpha(0).setDuration(800).setStartDelay(600);
+        findViewById(R.id.clover).animate().alpha(0).setDuration(800).setStartDelay(600);
         layer.animate().translationY(-2000).setDuration(800).setStartDelay(600);
         findViewById(R.id.morning).animate().alpha(0).translationY(-800).setDuration(800).setStartDelay(600);
 
@@ -72,12 +72,15 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void run()
                                 {
-
-
+                                    Intent i=new Intent(MainActivity.this,ListOne.class);
+                                    startActivity(i);
+                                    /*
                                     Intent show = new Intent(MainActivity.this, Main2Activity.class);
-                                    startActivity(show);
+                                    startActivity(show);*/
                                     louding.setVisibility(View.INVISIBLE);
                                     layer.animate().translationY(-2000).setDuration(800).setStartDelay(600);
+                                    findViewById(R.id.head).setVisibility(View.VISIBLE);
+
                                 }
                             }, 2000);
                             //////////////////////

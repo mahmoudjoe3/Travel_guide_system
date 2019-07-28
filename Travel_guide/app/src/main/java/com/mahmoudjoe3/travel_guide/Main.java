@@ -14,23 +14,6 @@ import android.widget.TextView;
 
 public class Main extends AppCompatActivity {
 
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-        Menu menu =navView.getMenu();
-        MenuItem menuItem=menu.getItem(0);
-        menuItem.setChecked(true);
-    }
-
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -54,6 +37,32 @@ public class Main extends AppCompatActivity {
             return false;
         }
     };
+
+
+    private String Country,Interest;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        Menu menu =navView.getMenu();
+        MenuItem menuItem=menu.getItem(0);
+        menuItem.setChecked(true);
+
+        Country=getIntent().getStringExtra("country");
+        Interest=getIntent().getStringExtra("interest");
+
+        ((TextView) findViewById(R.id.textView1)).setText(Country);
+        ((TextView) findViewById(R.id.textView2)).setText(Interest);
+
+
+
+    }
+
+
+
 
 
 }

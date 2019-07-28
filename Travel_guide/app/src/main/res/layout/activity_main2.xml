@@ -16,6 +16,64 @@
         app:srcCompat="@drawable/back" />
 
 
+    <RelativeLayout
+        android:layout_width="354dp"
+        android:layout_height="396dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+
+        >
+
+        <Spinner
+            android:id="@+id/city"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:background="@drawable/spiner_shap"
+            android:dropDownWidth="wrap_content"
+
+            android:entries="@array/city_menu"
+            android:fadeScrollbars="false"
+            android:pointerIcon="hand"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/spiner_shap"
+            android:entries="@array/cityop_menu"
+            android:fadeScrollbars="false"
+            android:pointerIcon="hand"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center" />
+
+
+        <com.spark.submitbutton.SubmitButton
+            android:id="@+id/find"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="41dp"
+            android:text="FIND OUT"
+            android:textColor="#000"
+            app:sub_btn_background="@color/white"
+            app:sub_btn_duration="3000"
+            app:sub_btn_line_color="@color/colorPrimaryDark"
+            app:sub_btn_ripple_color="@color/colorAccent"
+            app:sub_btn_tick_color="@color/white"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="358dp" />
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/layer2"
         android:layout_width="527dp"
@@ -56,65 +114,6 @@
         android:layout_margin="-34dp"
         android:src="@drawable/clover"
         tools:ignore="MissingConstraints" />
-
-    <RelativeLayout
-        android:layout_width="354dp"
-        android:layout_height="396dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-
-        >
-
-        <Spinner
-            android:id="@+id/city"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="43dp"
-            android:background="@drawable/spiner_shap"
-            android:dropDownWidth="wrap_content"
-
-            android:entries="@array/city_menu"
-            android:fadeScrollbars="false"
-            android:pointerIcon="hand"
-            android:spinnerMode="dropdown"
-            android:textAlignment="center" />
-
-
-
-        <Spinner
-            android:id="@+id/type"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
-            android:background="@drawable/spiner_shap"
-            android:entries="@array/cityop_menu"
-            android:fadeScrollbars="false"
-            android:pointerIcon="hand"
-            android:spinnerMode="dropdown"
-            android:textAlignment="center" />
-
-
-        <com.spark.submitbutton.SubmitButton
-            android:id="@+id/find"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="41dp"
-            android:text="FIND OUT"
-            android:textColor="#000"
-            app:sub_btn_background="@color/white"
-            app:sub_btn_duration="3000"
-            app:sub_btn_line_color="@color/colorPrimaryDark"
-            app:sub_btn_ripple_color="@color/colorAccent"
-            app:sub_btn_tick_color="@color/white"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="358dp" />
-    </RelativeLayout>
 
 
 </RelativeLayout>
