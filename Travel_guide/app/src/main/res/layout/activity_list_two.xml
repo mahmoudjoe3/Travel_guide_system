@@ -26,7 +26,8 @@
                     android:layout_height="match_parent"
                     android:textAlignment="center"
                     android:paddingTop="200dp"
-                    android:background="@drawable/c_germany"/>
+                    android:background="@drawable/hotels"
+                    android:scaleType="centerCrop"/>
                 <TextView
                     android:id="@+id/txt_hotel"
                     android:layout_width="match_parent"
@@ -47,7 +48,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/c_england"/>
+                    android:background="@drawable/sites"/>
 
                 <TextView
                     android:id="@+id/txt_historical"
@@ -57,54 +58,7 @@
                     android:paddingTop="200dp"
                     android:text="Main Historical Site"
                     android:textColor="#fff"
-                    android:textSize="24dp"
-                    />
-
-            </androidx.cardview.widget.CardView>
-
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="350dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_height="250dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/c_france"/>
-                <TextView
-                    android:id="@+id/txt_Transportation"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textAlignment="center"
-                    android:paddingTop="200dp"
-                    android:text="Main Means Of Transportation"
-                    android:textColor="#fff"
-                    android:textSize="24dp"
-                    />
-
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="350dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_height="250dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/c_egy"/>
-                <TextView
-                    android:id="@+id/txt_point_of_interest"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textAlignment="center"
-                    android:paddingTop="200dp"
-                    android:text="Main Points Of Interest"
-                    android:textColor="#fff"
-                    android:textSize="24dp"
+                    android:textSize="1dp"
                     />
 
             </androidx.cardview.widget.CardView>

@@ -14,12 +14,43 @@ import android.widget.TextView;
 
 public class account extends AppCompatActivity {
 
-    Intent switcher;
 
+    private String Country,Interest;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+
+                case R.id.navigation_home:
+                    Intent switcher=new Intent(account.this,Main.class);
+                    switcher.putExtra("country",Country);
+                    switcher.putExtra("interest",Interest);
+                    startActivity(switcher);
+                    return true;
+
+                case R.id.navigation_favorite:
+                    Intent switcher1=new Intent(account.this,favorite.class);
+                    switcher1.putExtra("country",Country);
+                    switcher1.putExtra("interest",Interest);
+                    startActivity(switcher1);
+                    return true;
+
+                case R.id.navigation_account:
+                    return true;
+            }
+            return false;
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+
+        Country=getIntent().getStringExtra("country");
+        Interest=getIntent().getStringExtra("interest");
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -30,27 +61,5 @@ public class account extends AppCompatActivity {
     }
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-
-                case R.id.navigation_home:
-                    switcher=new Intent(account.this,Main.class);
-                    startActivity(switcher);
-                    return true;
-
-                case R.id.navigation_favorite:
-                    switcher=new Intent(account.this,favorite.class);
-                    startActivity(switcher);
-                    return true;
-
-                case R.id.navigation_account:
-                    return true;
-            }
-            return false;
-        }
-    };
 }

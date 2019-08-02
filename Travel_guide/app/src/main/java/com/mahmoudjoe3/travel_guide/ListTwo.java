@@ -20,13 +20,11 @@ public class ListTwo extends AppCompatActivity implements View.OnClickListener {
 
         txt_hotel=findViewById(R.id.txt_hotel);
         txt_historical=findViewById(R.id.txt_historical);
-        txt_point_of_interest =findViewById(R.id.txt_point_of_interest);
-        txt_Transportation=findViewById(R.id.txt_Transportation);
+
 
         txt_hotel.setOnClickListener(this);
         txt_historical.setOnClickListener(this);
-        txt_point_of_interest.setOnClickListener(this);
-        txt_Transportation.setOnClickListener(this);
+
 
     }
 
@@ -46,18 +44,7 @@ public class ListTwo extends AppCompatActivity implements View.OnClickListener {
                 intent.putExtra("interest",txt_historical.getText().toString());
                 startActivity(intent);
                 break;
-            case R.id.txt_point_of_interest:
-                intent=new Intent(ListTwo.this,Main.class);
-                intent.putExtra("country",country);
-                intent.putExtra("interest",txt_point_of_interest.getText().toString());
-                startActivity(intent);
-                break;
-            case R.id.txt_Transportation:
-                intent=new Intent(ListTwo.this,Main.class);
-                intent.putExtra("country",country);
-                intent.putExtra("interest",txt_Transportation.getText().toString());
-                startActivity(intent);
-                break;
+
 
         }
 

@@ -27,7 +27,7 @@ public class wellcome_page extends AppCompatActivity {
                     }
                 },1500);
             }
-        },5000);
+        },6000);
 
     }
 }
