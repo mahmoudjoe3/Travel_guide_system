@@ -290,4 +290,25 @@ class SQLiteHelper extends SQLiteOpenHelper {
         cursor.moveToFirst();
         return cursor;
     }
+
+    public  void delete_hotel(String hotelname)
+    {
+
+        TravelDataBase = getWritableDatabase();
+        TravelDataBase.delete("FavouriteHotelTable" ,"FavouriteHotel='"+hotelname+"'",null );
+        TravelDataBase.close();
+
+    }
+
+    public  void delete_site(String sitename)
+    {
+
+        TravelDataBase = getWritableDatabase();
+        TravelDataBase.delete("FavouriteSiteTable", "FavouriteSite='" + sitename + "'", null);
+        TravelDataBase.close();
+
+
+
+    }
+
 }

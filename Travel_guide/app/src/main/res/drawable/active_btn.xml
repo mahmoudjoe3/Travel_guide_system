@@ -13,10 +13,12 @@
         android:startColor="#09908D"
         android:endColor="#00BFBC"
         android:type="linear"
+
         />
+
     <size
-        android:width="250dp"
-        android:height="60dp"
+        android:width="100dp"
+        android:height="100dp"
         />
     <stroke
         android:width="4dp"

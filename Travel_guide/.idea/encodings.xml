@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$USER_HOME$/AndroidStudio/DeviceExplorer/huawei-cor_l29-XTX7N18907002240/data/data/com.mahmoudjoe3.travel_guide/databases/TravelDataBase" charset="UTF-16" />
+  </component>
 </project>

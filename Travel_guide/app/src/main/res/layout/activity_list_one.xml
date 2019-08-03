@@ -21,11 +21,13 @@
                 android:layout_width="350dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                app:cardCornerRadius="20dp"
                 android:layout_height="250dp">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/c_england"/>
+                    android:background="@drawable/c_england"
+                   />
 
                 <TextView
                     android:id="@+id/txt_ENG"
@@ -45,6 +47,7 @@
                 android:layout_width="350dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
                 android:layout_height="250dp">
                 <ImageView
                     android:layout_width="match_parent"
@@ -68,6 +71,7 @@
                 android:layout_width="350dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
                 android:layout_height="250dp">
                 <ImageView
                     android:layout_width="match_parent"
@@ -91,6 +95,7 @@
                 android:layout_width="350dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
                 android:layout_height="250dp">
                 <ImageView
                     android:layout_width="match_parent"
@@ -115,6 +120,7 @@
                 android:layout_width="350dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
                 android:layout_height="250dp">
                 <ImageView
                     android:layout_width="match_parent"

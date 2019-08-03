@@ -29,6 +29,8 @@ public class account extends AppCompatActivity {
                     switcher.putExtra("country",Country);
                     switcher.putExtra("interest",Interest);
                     startActivity(switcher);
+                    overridePendingTransition(R.anim.fede_in2,R.anim.fede_out2);
+                    finish();
                     return true;
 
                 case R.id.navigation_favorite:
@@ -36,6 +38,8 @@ public class account extends AppCompatActivity {
                     switcher1.putExtra("country",Country);
                     switcher1.putExtra("interest",Interest);
                     startActivity(switcher1);
+                    overridePendingTransition(R.anim.fede_in2,R.anim.fede_out2);
+                    finish();
                     return true;
 
                 case R.id.navigation_account:

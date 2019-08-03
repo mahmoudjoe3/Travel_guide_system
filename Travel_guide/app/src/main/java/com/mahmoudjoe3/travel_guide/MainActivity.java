@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         layer=findViewById(R.id.layer2);
 
 
-        findViewById(R.id.clover).animate().alpha(0).setDuration(800).setStartDelay(600);
-        layer.animate().translationY(-2000).setDuration(800).setStartDelay(600);
-        findViewById(R.id.morning).animate().alpha(0).translationY(-800).setDuration(800).setStartDelay(600);
+        findViewById(R.id.clover).animate().alpha(0).setDuration(800).setStartDelay(2600);
+        layer.animate().translationY(-2000).setDuration(800).setStartDelay(2600);
+        findViewById(R.id.morning).animate().alpha(0).translationY(-800).setDuration(800).setStartDelay(2600);
 
         Animation head = AnimationUtils.loadAnimation(this,R.anim.apphead_anim);
         findViewById(R.id.head).startAnimation(head);
@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(show);*/
                                     louding.setVisibility(View.INVISIBLE);
                                     layer.animate().translationY(-2000).setDuration(800).setStartDelay(600);
-                                    findViewById(R.id.head).setVisibility(View.VISIBLE);
+                                    overridePendingTransition(R.anim.fede_in,R.anim.fede_out);
+                                    //findViewById(R.id.head).setVisibility(View.VISIBLE);
+                                    finish();
 
                                 }
                             }, 2000);

@@ -7,13 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".favorite">
 
-<ListView
-    android:id="@+id/list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="40dp"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="55dp"/>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="390dp"
+        android:layout_height="638dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

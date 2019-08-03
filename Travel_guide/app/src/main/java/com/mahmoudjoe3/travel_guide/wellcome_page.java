@@ -18,12 +18,14 @@ public class wellcome_page extends AppCompatActivity {
             @Override
             public void run() {
 
-                findViewById(R.id.layer2).animate().translationY(0).setDuration(800).setStartDelay(600);
+                findViewById(R.id.layer2).animate().translationY(-270).setDuration(800).setStartDelay(600);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         Intent intent=new Intent(wellcome_page.this,MainActivity.class);
                         startActivity(intent);
+                        overridePendingTransition(R.anim.fede_in,R.anim.fede_out);
+                        finish();
                     }
                 },1500);
             }

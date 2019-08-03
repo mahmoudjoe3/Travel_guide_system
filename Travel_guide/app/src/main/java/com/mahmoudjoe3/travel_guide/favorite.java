@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class favorite extends AppCompatActivity {
 
     private String Country,Interest;
-
+public ArrayAdapter<String> adapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -33,6 +33,8 @@ public class favorite extends AppCompatActivity {
                     switcher.putExtra("country",Country);
                     switcher.putExtra("interest",Interest);
                     startActivity(switcher);
+                    overridePendingTransition(R.anim.fede_in2,R.anim.fede_out2);
+                    finish();
                     return true;
 
                 case R.id.navigation_favorite:
@@ -43,6 +45,8 @@ public class favorite extends AppCompatActivity {
                     switcher2.putExtra("country",Country);
                     switcher2.putExtra("interest",Interest);
                     startActivity(switcher2);
+                    overridePendingTransition(R.anim.fede_in2,R.anim.fede_out2);
+                    finish();
                     return true;
             }
             return false;
@@ -63,27 +67,28 @@ public class favorite extends AppCompatActivity {
         menuItem.setChecked(true);
 
         ListView l = (ListView) findViewById(R.id.list);
-        final SQLiteHelper s1 = new SQLiteHelper(this);
-        ArrayAdapter<String> a = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        l.setAdapter(a);
-
+         SQLiteHelper s1 = new SQLiteHelper(this);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        l.setAdapter(adapter);
+        adapter.clear();
 
         try {
             Cursor cursor = s1.ShowAllFavouriteHotels();
 
 
             while (!cursor.isAfterLast()) {
-                a.add(cursor.getString(1));
+                adapter.add(cursor.getString(1));
                 cursor.moveToNext();
 
             }
             cursor = s1.ShowAllFavouriteSites();
 
             while (!cursor.isAfterLast()) {
-                a.add(cursor.getString(1));
+                adapter.add(cursor.getString(1));
                 cursor.moveToNext();
 
             }
+
         }
         catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
