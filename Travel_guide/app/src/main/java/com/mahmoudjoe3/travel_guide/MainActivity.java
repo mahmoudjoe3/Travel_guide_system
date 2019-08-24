@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         layer=findViewById(R.id.layer2);
 
 
-        findViewById(R.id.clover).animate().alpha(0).setDuration(800).setStartDelay(2600);
-        layer.animate().translationY(-2000).setDuration(800).setStartDelay(2600);
-        findViewById(R.id.morning).animate().alpha(0).translationY(-800).setDuration(800).setStartDelay(2600);
+        findViewById(R.id.clover).animate().alpha(0).setDuration(800).setStartDelay(1600);
+        layer.animate().translationY(-2000).setDuration(800).setStartDelay(1600);
+        findViewById(R.id.morning).animate().alpha(0).translationY(-800).setDuration(800).setStartDelay(1600);
 
         Animation head = AnimationUtils.loadAnimation(this,R.anim.apphead_anim);
         findViewById(R.id.head).startAnimation(head);

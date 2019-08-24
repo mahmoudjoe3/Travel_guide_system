@@ -69,12 +69,10 @@ public class Main extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_account:
-                    Intent switcher2=new Intent(Main.this,account.class);
-                    switcher2.putExtra("country",Country);
-                    switcher2.putExtra("interest",Interest);
-                    startActivity(switcher2);
+                    browser=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.booking.com/index.ar.html?aid=356980&label=gog235jc-1FCAYY7wcoUDhtSDNYA2hDiAEBmAEBuAEZyAEM2AEB6AEB-AENiAIBqAIDuAKZwJfqBcACAQ&sid=bebdaca7e8f8766137b736474dc49f94&click_from_logo=1"));
+                    startActivity(browser);
                     overridePendingTransition(R.anim.fede_in2,R.anim.fede_out2);
-                    finish();
+
                     return true;
             }
             return false;
@@ -205,20 +203,48 @@ public class Main extends AppCompatActivity {
         Cursor cursor;
         sites_or_hotel=site_or_hotel;
         city_name=city;
-        if(!sites_or_hotel.equals("sites"))
+        /*if(!sites_or_hotel.equals("sites"))
         {
             c3.setVisibility(View.INVISIBLE);
             c4.setVisibility(View.INVISIBLE);
             c5.setVisibility(View.INVISIBLE);
 
         }
-
+*/
         if(sites_or_hotel.equals("sites"))
         {
             cursor= s1.GetSites(city_name);
         }
         else {
-            cursor= s1.GetHotels(city_name);
+            cursor = s1.GetHotels(city_name);
+            if (city_name == "Egypt") {
+                I3.setImageResource(R.drawable.e3);
+                t3.setText("Billionaire Gerald Chan’s luxury country house, only an hour from London and surrounded by 400 acres of grounds, is something rather magical. Rooms are homely yet stylish, Skye Gyngell is on-hand as culinary director and guests can swim in the lake");
+                I4.setImageResource(R.drawable.e4);
+                t4.setText("The best castles to stay in England, hand-picked by our experts. We personally stay in every castle we feature and love sharing our experiences to help others. If you'd like to discuss castle hotels in England");
+                I5.setImageResource(R.drawable.e5);
+                t5.setText("The MERCURE BRIGHTON SEAFRONT is a Tourist hotel. Located in Sea Front area. Shopping is within walking distance and the nightlife/restaurants are located in the hotel");
+            }
+            else if (city_name == "England") {
+                I3.setImageResource(R.drawable.e4);
+                t3.setText("The best castles to stay in England, hand-picked by our experts. We personally stay in every castle we feature and love sharing our experiences to help others. If you'd like to discuss castle hotels in England");
+
+                I4.setImageResource(R.drawable.e3);
+                t4.setText("Billionaire Gerald Chan’s luxury country house, only an hour from London and surrounded by 400 acres of grounds, is something rather magical. Rooms are homely yet stylish, Skye Gyngell is on-hand as culinary director and guests can swim in the lake");
+                I5.setImageResource(R.drawable.e5);
+                t5.setText("The MERCURE BRIGHTON SEAFRONT is a Tourist hotel. Located in Sea Front area. Shopping is within walking distance and the nightlife/restaurants are located in the hotel");
+            }
+            else
+            {
+                I3.setImageResource(R.drawable.e5);
+                t3.setText("The MERCURE BRIGHTON SEAFRONT is a Tourist hotel. Located in Sea Front area. Shopping is within walking distance and the nightlife/restaurants are located in the hotel");
+
+                I4.setImageResource(R.drawable.e3);
+                t4.setText("Billionaire Gerald Chan’s luxury country house, only an hour from London and surrounded by 400 acres of grounds, is something rather magical. Rooms are homely yet stylish, Skye Gyngell is on-hand as culinary director and guests can swim in the lake");
+                I5.setImageResource(R.drawable.e5);
+                t5.setText("The MERCURE BRIGHTON SEAFRONT is a Tourist hotel. Located in Sea Front area. Shopping is within walking distance and the nightlife/restaurants are located in the hotel");
+
+            }
         }
 
         int x=0;
@@ -1245,110 +1271,109 @@ public class Main extends AppCompatActivity {
 
 
         if (searchKey.equals("The Great Pyramids")) {
-            websitelink="https://www.youtube.com/";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A3%D9%87%D8%B1%D8%A7%D9%85_%D8%A7%D9%84%D8%AC%D9%8A%D8%B2%D8%A9";
 
         } else if (searchKey.equals("Luxor's Karnak Temple")) {
-            websitelink="";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%83%D8%B1%D9%86%D9%83";
 
         } else if (searchKey.equals("St.Catherine Monastery")) {
-            websitelink="";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%AF%D9%8A%D8%B1_%D8%B3%D8%A7%D9%86%D8%AA_%D9%83%D8%A7%D8%AA%D8%B1%D9%8A%D9%86";
 
         } else if (searchKey.equals("Siwa Oasis")) {
-            websitelink="";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%B3%D9%8A%D9%88%D8%A9";
 
         } else if (searchKey.equals("White Desert")) {
-            websitelink="";
+            websitelink="https://en.wikipedia.org/wiki/White_Desert_National_Park";
 
         } else if (searchKey.equals("Eiffel Tower")) {
-            websitelink="";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC_%D8%A5%D9%8A%D9%81%D9%84";
 
         } else if (searchKey.equals("Louvre Museum")) {
-            websitelink="";
+            websitelink="https://ar.wikipedia.org/wiki/%D9%85%D8%AA%D8%AD%D9%81_%D8%A7%D9%84%D9%84%D9%88%D9%81%D8%B1";
 
         } else if (searchKey.equals("Palace of Versailles")) {
-            websitelink="https://www.google.com/maps/place/Palace+of+Versailles/@48.8048649,2.1181667,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67d94d7b14c75:0x538fcc15f59ce8f!8m2!3d48.8048649!4d2.1203554";
+            websitelink="https://ar.wikipedia.org/wiki/%D9%82%D8%B5%D8%B1_%D9%81%D8%B1%D8%B3%D8%A7%D9%8A";
 
         } else if (searchKey.equals("Mont Saint-Michel")) {
-            websitelink="https://www.google.com/maps/place/50170+Mont+Saint-Michel,+France/@48.6363484,-1.5987569,12z/data=!3m1!4b1!4m5!3m4!1s0x480ea8d67c9ceeb3:0xc5834ce47e0dc3fe!8m2!3d48.636063!4d-1.511457";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%AC%D8%A8%D9%84_%D8%A7%D9%84%D9%82%D8%AF%D9%8A%D8%B3_%D9%85%D9%8A%D8%B4%D9%8A%D9%84";
 
         } else if (searchKey.equals("Loire Valley Châteaux")) {
-            websitelink="https://www.google.com/maps/place/Ch%C3%A2teau+de+Chenonceau/@47.4080646,-4.0131978,6z/data=!4m8!1m2!2m1!1sLoire+Valley+Ch%C3%A2teaux!3m4!1s0x47fcb0d5d9a0a8a1:0x261259efc9ff1001!8m2!3d47.3248696!4d1.0703005";
+            websitelink="https://ar.wikipedia.org/wiki/%D9%88%D8%A7%D8%AF%D9%8A_%D8%A7%D9%84%D9%84%D9%88%D8%A7%D8%B1";
 
         } else if (searchKey.equals("Stonehenge")) {
-            websitelink="https://www.google.com/maps/place/Stonehenge/@51.1323881,-1.9540918,11z/data=!4m8!1m2!2m1!1sStonehenge!3m4!1s0x0:0x979170e2bcd3d2dd!8m2!3d51.1788856!4d-1.8262196";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%B3%D8%AA%D9%88%D9%86%D9%87%D9%86%D8%AC";
 
         } else if (searchKey.equals("Tower of London")) {
-            websitelink="https://www.google.com/maps/place/Tower+of+London/@51.5081124,-0.078138,17z/data=!3m1!4b1!4m5!3m4!1s0x48760349331f38dd:0xa8bf49dde1d56467!8m2!3d51.5081124!4d-0.0759493 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC_%D9%84%D9%86%D8%AF%D9%86";
 
         } else if (searchKey.equals("The Roman Baths and Georgian City of Bath")) {
-            websitelink="https://www.google.com/maps/place/The+Roman+Baths/@51.381072,-2.3618077,17z/data=!3m1!4b1!4m5!3m4!1s0x48718113ded530b5:0xe46be6814f1224d!8m2!3d51.381072!4d-2.359619";
+            websitelink="https://en.wikipedia.org/wiki/Roman_Baths,_Strand_Lane";
 
         } else if (searchKey.equals("Canterbury Cathedral")) {
-            websitelink="https://www.google.com/maps/place/Canterbury+Cathedral/@51.2797971,1.0806111,17z/data=!3m1!4b1!4m5!3m4!1s0x47deca4aa51185d9:0xd5cea13e62d94916!8m2!3d51.2797971!4d1.0827998 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D9%83%D8%A7%D8%AA%D8%AF%D8%B1%D8%A7%D8%A6%D9%8A%D8%A9_%D9%83%D8%A7%D9%86%D8%AA%D8%B1%D8%A8%D8%B1%D9%8A";
 
         } else if (searchKey.equals("Eden Project")) {
-            websitelink="https://www.google.com/maps/place/Eden+Project/@50.3601344,-4.7469065,17z/data=!3m1!4b1!4m5!3m4!1s0x486b6f66daf3a1b5:0x5660ab505756c241!8m2!3d50.3601344!4d-4.7447178";
+            websitelink="https://ar.wikipedia.org/wiki/%D9%85%D8%B4%D8%B1%D9%88%D8%B9_%D8%B9%D8%AF%D9%86";
 
         } else if (searchKey.equals("Colosseum")) {
-            websitelink="https://www.google.com/maps/place/Colosseum/@41.8902102,12.4900422,17z/data=!3m1!4b1!4m5!3m4!1s0x132f61b6532013ad:0x28f1c82e908503c4!8m2!3d41.8902102!4d12.4922309 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D9%83%D9%88%D9%84%D9%88%D8%B3%D9%8A%D9%88%D9%85";
 
         } else if (searchKey.equals("Venice Canals")) {
-            websitelink="https://www.google.com/maps/place/Venice+Canals/@33.9835027,-118.4698692,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2baa2bf5a7289:0x96e7291be897f918!8m2!3d33.9835027!4d-118.4676805 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%82%D9%86%D8%A7%D9%84_%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1_(%D9%81%D9%8A%D9%86%D9%8A%D8%B3%D9%8A%D8%A7)";
 
         } else if (searchKey.equals("Pompeii")) {
-            websitelink="https://www.google.com/maps/place/80045+Pompei,+Metropolitan+City+of+Naples,+Italy/@40.7465984,14.4236419,12z/data=!3m1!4b1!4m5!3m4!1s0x133bbc95914ba4ef:0xd2d18a72aeb414a4!8m2!3d40.7461572!4d14.4989344 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D9%85%D8%A8%D9%8A";
 
         } else if (searchKey.equals("Leaning Tower of Pisa")) {
-            websitelink="https://www.google.com/maps/place/Leaning+Tower+of+Pisa/@43.722952,10.3944083,17z/data=!3m1!4b1!4m5!3m4!1s0x12d591a6c44e88cd:0x32eca9b1d554fc03!8m2!3d43.722952!4d10.396597 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC_%D8%A8%D9%8A%D8%B2%D8%A7_%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%84";
 
         } else if (searchKey.equals("Vatican City")) {
-            websitelink="https://www.google.com/maps/place/00120+Vatican+City/@41.903815,12.4345516,14z/data=!3m1!4b1!4m5!3m4!1s0x1325890a57d42d3d:0x94f9ab23a7eb0!8m2!3d41.902916!4d12.453389";
+            websitelink="https://en.wikipedia.org/wiki/Vatican_City";
 
         } else if (searchKey.equals("Editor's PickBerlin's Brandenburg Gate")) {
-            websitelink="https://www.google.com/maps/place/Brandenburg+Gate/@52.5162746,13.3755154,17z/data=!3m1!4b1!4m5!3m4!1s0x47a851c655f20989:0x26bbfb4e84674c63!8m2!3d52.5162746!4d13.3777041";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D8%A8%D8%B1%D8%A7%D9%86%D8%AF%D9%86%D8%A8%D9%88%D8%B1%D8%BA";
 
-        } else if (searchKey.equals("Cologne Cathedral (Kölner Dom)")) {
-            websitelink="https://www.google.com/maps/place/Cologne+Cathedral/@50.9412784,6.9560927,17z/data=!3m2!4b1!5s0x47bf25baabc20433:0x312b7d4db7d02b48!4m5!3m4!1s0x47bf25a5369c3d2f:0x29ec913896e3a9c6!8m2!3d50.9412784!4d6.9582814 ";
+        } else if (searchKey.equals("Cologne Cathedral (K?lner Dom)")) {
+            websitelink="https://ar.wikipedia.org/wiki/%D9%83%D8%A7%D8%AA%D8%AF%D8%B1%D8%A7%D8%A6%D9%8A%D8%A9_%D9%83%D9%88%D9%84%D9%88%D9%86%D9%8A%D8%A7";
 
         } else if (searchKey.equals("The Black Forest")) {
-            websitelink="https://www.google.com/maps/place/Black+Forest/@48.1838482,3.7426629,6z/data=!3m1!4b1!4m5!3m4!1s0x4790ec232f1791bd:0xdbe2bec8ae87edf1!8m2!3d48.2774862!4d8.185997";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%BA%D8%A7%D8%A8%D8%A9_%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A7%D8%A1";
 
         } else if (searchKey.equals("The Ultimate Fairytale Castle: Neuschwanstein")) {
-            websitelink="https://www.google.com/maps/place/Neuschwanstein+Castle/@47.557574,10.7476117,17z/data=!3m1!4b1!4m5!3m4!1s0x479cf7cac44ea35d:0xc8a6866bd39dbba3!8m2!3d47.557574!4d10.7498004 ";
+            websitelink="https://en.wikipedia.org/wiki/Neuschwanstein_Castle";
 
         } else if (searchKey.equals("Berlin's Museum Island")) {
-            websitelink="https://www.google.com/maps/place/Museum+Island/@52.5168826,13.3846314,14z/data=!3m1!4b1!4m5!3m4!1s0x47a851df3c8bcac7:0x936c396c9e126807!8m2!3d52.5169328!4d13.4018997 ";
+            websitelink="https://ar.wikipedia.org/wiki/%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9_%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81";
 
         } else if (searchKey.equals("Fairmont Nile City, Cairo")) {
-            websitelink="https://www.google.com/maps/place/Fairmont+Nile+City+Hotel,+Cairo/@30.0719936,31.2255448,17z/data=!3m1!4b1!4m8!3m7!1s0x145840fa057818c7:0x3f7e03a153cbeafc!5m2!4m1!1i2!8m2!3d30.0719936!4d31.2277335 ";
+            websitelink="https://www.fairmont.com/nile-city-cairo/?cmpid=google_cai_search-branded_me-branded-e-revsh&gclid=CjwKCAjw4ZTqBRBZEiwAHHxpfvlaxZW2NdcMl4lV5cmnkv7aBJBWjKHLpFkOkhqtb1ej5STIKGl4fRoCdZwQAvD_BwE";
 
         } else if (searchKey.equals("Aqua Hotel Resort & Spa, Sharm El-Sheikh")) {
-            websitelink="https://www.google.com/maps/place/Aqua+Hotel+Resort+and+Spa/@30.0719936,31.2255448,17z/data=!4m8!3m7!1s0x14534c3a3a06f63d:0xb4fcde3dbb49b5e7!5m2!4m1!1i2!8m2!3d28.0283036!4d34.4354546 ";
+            websitelink="https://www.booking.com/hotel/eg/aqua-resort-and-spa-sharm-el-sheikh.ar.html?aid=356980;label=gog235jc-1DCA0oQ0IjYXF1YS1yZXNvcnQtYW5kLXNwYS1zaGFybS1lbC1zaGVpa2hIAVgDaEOIAQGYAQG4ARfIAQzYAQPoAQH4AQKIAgGoAgO4AuTZl-oFwAIB;sid=df1802cd0a8bb1da1842c3cd2c6be55e";
 
         } else if (searchKey.equals("Disneyland Hotel, Chessy, Seine-et-Marne")) {
-            websitelink="https://www.google.com/maps/place/Disneyland+Hotel/@48.8708823,2.7787907,17z/data=!3m1!4b1!4m8!3m7!1s0x47e61d1971f9af8b:0x1a635ad691123731!5m2!4m1!1i2!8m2!3d48.8708823!4d2.7809794";
-
+            websitelink="https://www.tripadvisor.com/Hotel_Review-g1182377-d235644-Reviews-Disneyland_Hotel-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html";
         } else if (searchKey.equals("Kanopée Village - Campground, Trévoux, Ain")) {
-            websitelink="https://www.google.com/maps/place/Camping+Sites+and+Landscapes+Kanopée+Village/@45.939277,4.7647113,17z/data=!3m1!4b1!4m8!3m7!1s0x47f4906718bfdde5:0x264e98b517681a9e!5m2!4m1!1i2!8m2!3d45.939277!4d4.7669 ";
+            websitelink="https://www.kanopee-village.com/fr";
 
         } else if (searchKey.equals("Karma St. Martin's Hotel, Lower Town, Isles of Scilly")) {
-            websitelink="https://www.google.com/maps/place/Karma+St.+Martin's/@49.9663221,-6.3057514,17z/data=!3m1!4b1!4m8!3m7!1s0x48400efdf04c1dfd:0x1e0a4d0edb910e90!5m2!4m1!1i2!8m2!3d49.9663221!4d-6.3035627 ";
+            websitelink="https://www.britainsfinest.co.uk/hotels/karma-st-martins?gclid=CjwKCAjw4ZTqBRBZEiwAHHxpfiMRUUZP9C4w-MQL-IAd9aTjm2h_kmaMEF3sds6E_GGrEiO4Pj4oEBoCDiYQAvD_BwE";
 
         } else if (searchKey.equals("Village House Hotel - Inn, Findon")) {
-            websitelink="https://www.google.com/maps/place/Village+House+Coaching+Inn/@50.8684117,-0.4094929,17z/data=!3m1!4b1!4m8!3m7!1s0x4875a2a0fbeefd0f:0x3d6bcf0d5a117a5!5m2!4m1!1i2!8m2!3d50.8684117!4d-0.4073042";
+            websitelink="https://www.expedia.com/Village-House-Hotel-Inn.h3856325.Hotel-Information?chkin=8%2F3%2F2019&chkout=8%2F4%2F2019&regionId=177868&destination=Worthing%2C+England%2C+United+Kingdom&swpToggleOn=true&selected=3856325&rm1=a2&x_pwa=1&sort=recommended&SEMCID=US.UB.GOOGLE.PT-c-EN.HOTEL&SEMDTL=a1390002428.b153781188625.r1d144f3cb7214a4110321a638a610ab815cfa6fab21d56ca542dbef7dbe819e41.g1kwd-304651860622.i1.d1280259506455.e1c.j121469.k11006725.f11t1.n1.l1g.h1e.m1&GCLID=CjwKCAjw4ZTqBRBZEiwAHHxpfu-D4TrWAVAXueUMVW4Bte6irdye44lqO-P0cr82OPQkGGSfs8sXzxoC3dYQAvD_BwE&rfrr=HSR&pwa_ts=1564864235413";
 
         } else if (searchKey.equals("Strand Hotel Terme Delfini, Ischia")) {
-            websitelink="https://www.google.com/maps/place/Strand+Hotel+Delfini/@40.726144,13.9569273,17z/data=!3m1!4b1!4m8!3m7!1s0x133b6ae103562f53:0xffcb0581c33d6eee!5m2!4m1!1i2!8m2!3d40.726144!4d13.959116";
+            websitelink="http://en.hoteldelfini.it/";
 
         } else if (searchKey.equals("Villa Casale")) {
-            websitelink="https://www.google.com/maps/place/Villa+Casale/@39.1760549,12.2434131,7z/data=!4m11!1m2!2m1!1sVilla+Casale!3m7!1s0x133b959ffc39e24d:0x604758b05b97f6c1!5m2!4m1!1i2!8m2!3d40.6483975!4d14.6119192";
+            websitelink="https://www.tripadvisor.com/Hotel_Review-g194873-d1116167-Reviews-Villa_Casale-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html";
 
 
         } else if (searchKey.equals("LEGOLAND Feriendorf, Günzburg")) {
-            websitelink="https://www.google.com/maps/place/Legoland+Deutschland+Resort/@48.4250473,10.3091277,17z/data=!3m1!4b1!4m8!3m7!1s0x47994557c354d26b:0x9b53ec35a480d7d5!5m2!4m1!1i2!8m2!3d48.4250473!4d10.3113164";
+            websitelink="https://www.expedia.de/Guenzburg-Hotels-LEGOLAND-Feriendorf.h4532850.Hotel-Beschreibung?chkin=03.08.2019&chkout=04.08.2019&rm1=a2&hwrqCacheKey=c3694efc-591e-49e1-85a4-a323bbdcaca0HWRQ1564864706605&cancellable=false&regionId=181171&vip=false&c=66aa771b-7c85-4b62-a1e5-be4351b1b88e&";
 
         } else if (searchKey.equals("Hotel Ling Bao, Walberberg, Bornheim")) {
-            websitelink="https://www.google.com/maps/place/Hotel+Ling+Bao+-+Phantasialand+Erlebnishotel/@50.7983562,6.8820975,17z/data=!3m1!4b1!4m8!3m7!1s0x47bf180de6a4e1f1:0xe632225abe67e1f0!5m2!4m1!1i2!8m2!3d50.7983562!4d6.8842862";
+            websitelink="https://www.booking.com/hotel/de/ling-bao.ar.html?aid=325251;label=ling-bao-lTH7OjeOz%2AhWbkLQxqWOLAS7215780723%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-181873118643%3Akwd-6281043166%3Alp21469%3Ali%3Adec%3Adm;sid=df1802cd0a8bb1da1842c3cd2c6be55e;dest_id=-1753303;dest_type=city;dist=0;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1564864820;srpvid=7653915a8e34023b;type=total;ucfs=1&#hotelTmpl";
 
         }
 

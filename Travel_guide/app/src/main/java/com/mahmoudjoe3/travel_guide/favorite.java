@@ -2,6 +2,7 @@ package com.mahmoudjoe3.travel_guide;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class favorite extends AppCompatActivity {
-
+    Intent browser;
     private String Country,Interest;
 public ArrayAdapter<String> adapter;
 
@@ -41,12 +42,9 @@ public ArrayAdapter<String> adapter;
                     return true;
 
                 case R.id.navigation_account:
-                    Intent switcher2=new Intent(favorite.this,account.class);
-                    switcher2.putExtra("country",Country);
-                    switcher2.putExtra("interest",Interest);
-                    startActivity(switcher2);
+                    browser=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.booking.com/index.ar.html?aid=356980&label=gog235jc-1FCAYY7wcoUDhtSDNYA2hDiAEBmAEBuAEZyAEM2AEB6AEB-AENiAIBqAIDuAKZwJfqBcACAQ&sid=bebdaca7e8f8766137b736474dc49f94&click_from_logo=1"));
+                    startActivity(browser);
                     overridePendingTransition(R.anim.fede_in2,R.anim.fede_out2);
-                    finish();
                     return true;
             }
             return false;

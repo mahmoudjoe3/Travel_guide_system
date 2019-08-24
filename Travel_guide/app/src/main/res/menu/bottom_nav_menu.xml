@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/baseline_account_box_black_24dp"
+        android:icon="@drawable/airplane"
         android:title="@string/title_account" />
 
 </menu>
